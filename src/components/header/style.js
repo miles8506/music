@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 
 export const HeaderWrapper = styled.div`
-  height: 70px;
+  height: 75px;
   background-color: #242424;
 
   .header-content {
     display: flex;
     justify-content: space-between;
+    height: 70px;
     color: #fff;
 
     &__left {
@@ -16,7 +17,6 @@ export const HeaderWrapper = styled.div`
         height: 69px;
         background-position: 0 0;
         text-indent: -9999px;
-        font-size: 0;
       }
     }
 
@@ -52,7 +52,8 @@ export const HeaderWrapper = styled.div`
     }
   }
   .header-divider {
-    
+    height: 5px;
+    background-color: #C20C0C;
   }
 `
 

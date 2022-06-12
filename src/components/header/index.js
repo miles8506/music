@@ -23,13 +23,13 @@ export default function MSHeader() {
       )
     } else {
       return (
-        <NavLink
-          to={item.link}
+        <a
+          href={item.link}
           key={item.title}
           className="item"
         >
           {item.title}
-        </NavLink>
+        </a>
       )
     }
   }
@@ -39,7 +39,7 @@ export default function MSHeader() {
       <div className="header-content wrap-v1">
         <div className="header-content__left">
           <a href="#/" className='header-content__left-logo sprite_01'>
-            logo
+            網易雲音樂
           </a>
           <HeaderSelectWrapper>
             {
