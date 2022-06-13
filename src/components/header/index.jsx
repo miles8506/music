@@ -15,7 +15,6 @@ export default function MSHeader() {
           to={item.link}
           key={item.title}
           className="item"
-          exact
         >
           {item.title}
           <i className='sign sprite_01'></i>

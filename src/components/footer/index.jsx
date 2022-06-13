@@ -33,8 +33,8 @@ export default function MSFooter() {
             <div className="footer-left-info-copy-num">杭州樂讀科技有限公司運營：浙網文[2021] 1186-054號</div>
           </div>
           <div className="footer-left-detail">
-            <div>粤B2-20090191-18  工业和信息化部备案管理系统网站</div>
-            <div>浙公网安备 33010902002564号</div>
+            <div>粵B2-20090191-18  工業和信息化部備案管理系統網站</div>
+            <div>浙公網安備 33010902002564號</div>
           </div>
         </FooterLeft>
         <FooterRight className="footer-right">
