@@ -1,15 +1,11 @@
-import React, { useEffect } from 'react'
-import { requestAPI } from '@/service/'
+import React, { memo } from 'react'
 
-export default function Recommend() {
-  useEffect(() => {
-    requestAPI('GET', { url: 'banner' }).then(res => {
-      console.log(res);
-    })
-  })
+import Banner from './c-cpns/banner'
+
+export default memo(function() {
   return (
     <div>
-      
+      <Banner />
     </div>
   )
-}
+})

@@ -18,11 +18,10 @@ axiosInstance.interceptors.response.use((res) => {
   throw new Error('error', err)
 })
 
-export function requestAPI(method, request) {
+export function requestAPI(payload) {
   return new Promise((resolve, reject) => {
     axiosInstance.request({
-      method,
-      ...request
+      ...payload
     })
       .then(res => resolve(res))
       .catch(err => reject(err))
