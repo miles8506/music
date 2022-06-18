@@ -1,12 +1,22 @@
-import { CHANGE_BANNER } from "./constants"
-import { requestBanners } from '@/service/recommend'
+import { CHANGE_BANNER, CHANGE_HOT_RECOMMEND } from "./constants"
+import { requestBanners, requestHotRecommend } from '@/service'
 
+// action
 const changeBannerAction = (res) => ({ type: CHANGE_BANNER, payload: res })
 
+const changeHotRecommend = (res) => ({ type: CHANGE_HOT_RECOMMEND, payload: res })
+
+// thunk
 export const getBannersAction = () => {
   return async dispatch => {
     const res = await requestBanners({ method: 'GET', url: 'banner' })
-    // dispatch(res)
     dispatch(changeBannerAction(res))
+  }
+}
+
+export const getHotRecommend = (limit = 8) => {
+  return async dispatch => {
+    const res = await requestHotRecommend({ method: 'GET', url: '/personalized', params: { limit } })
+    dispatch(changeHotRecommend(res))
   }
 }
