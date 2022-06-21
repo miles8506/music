@@ -1,1 +1,1 @@
-export { requestAPI } from './request'
+export * from './recommend'
